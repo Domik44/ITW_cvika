@@ -1,0 +1,198 @@
+/* 
+Author:   Dominik Pop
+Login:    xpopdo00 
+*/
+
+
+/* ************************ BASICS ************************** */
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container
+{
+    justify-content: center;
+}
+
+.container section {
+  width: 960px;
+  margin: auto;
+}
+
+.margin {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* ************************ HEADER ************************** */
+
+header {
+  padding-top: 30px;
+  background-color: #3c1f0a;
+  height: 145px;
+}
+
+header ul
+{
+    padding: 0;
+    margin-top: 50px;
+}
+
+header li
+{
+    display:inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+header img {
+  display: none;
+}
+
+header li:hover img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 7px;
+}
+
+/* ************************ HEADINGS ************************** */
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  color: #b15e23;
+}
+
+footer h2 {
+  color: inherit;
+}
+
+header h2 {
+  color: #d5a17c;
+  margin: 0;
+  font-style: italic;
+}
+
+h3 {
+  color: #3c1f0a;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+p {    
+    color: grey;
+    margin: 5px 0px;
+}
+
+/* ************************ SECTIONS ************************** */
+
+#basicInfoDiv {
+  padding-top: 15px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(white, #ecebeb);
+}
+
+#excersise h3 {
+  margin-bottom: 20px;
+}
+
+#excersise img {
+  margin-right: 20px;
+}
+
+/* ************************ IMG ************************** */
+
+img {
+    display: inline-block;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+/* ************************ HR ************************** */
+
+hr {    
+    color: #d5a17c;
+    border-top: dotted 1px;
+    margin: 0;
+}
+
+/* ************************ TABLE ************************** */
+
+table {
+    border: 3px solid black;
+    width: 600px;
+}
+
+th {
+    color: gray;  
+    border: 3px solid #3c1f0a;
+    border-top: 3px dotted #3c1f0a;
+    border-left: 3px dotted #3c1f0a;
+    background-color: #d5a17c;  
+}
+
+td {
+    border-top: 2px solid black;
+    border-bottom: 2px solid grey;
+    text-align: center;
+}
+
+/* ************************ DEFINITION LIST ************************** */
+
+dl {
+    width: 330px;
+}
+
+dd {
+  text-align: right;
+  color: #d5a17c;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+dt {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+dt:after {
+  content: ":";
+}
+
+/* ************************ HREF ************************** */
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: black;
+  text-decoration: none;  
+  }
+
+/* ************************ FOOTER ************************** */
+
+footer {
+      background-color: #3c1f0a;
+      padding: 15px;
+      margin-top: 40px;
+}
+
+footer ul {
+  padding-left: 25px;
+}
+
+footer li {
+  color:#d5a17c;
+  margin-bottom: 8px;
+  list-style-image: url('footer_list_bullet.gif');
+}

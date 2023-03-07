@@ -1,0 +1,254 @@
+/* 
+Author:   Dominik Pop
+Login:    xpopdo00 
+*/
+
+
+/* ************************ BASICS ************************** */
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container
+{
+    width: 960px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/* .container section {
+  width: 960px;
+  margin: auto;
+} */
+
+.row {
+  display: flex;
+}
+
+.afterRow {
+  margin-bottom: 20px;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 30%;}
+.col-4 {width: 40%;}
+.col-5 {width: 50%;}
+.col-6 {width: 60%;}
+.col-7 {width: 70%;}
+.col-8 {width: 80%;}
+.col-9 {width: 90%;}
+.col-10 {width: 100%;}
+
+.leftCol {
+  margin-right: 25px;
+  /* padding-right: 25px; */
+}
+
+.rightCol {
+  /* margin-left: 25px; */
+  padding-left: 25px;
+}
+
+/* ************************ HEADER ************************** */
+
+header {
+  padding-top: 30px;
+  background-color: #3c1f0a;
+  height: 145px;
+}
+
+header ul
+{
+    padding: 0;
+    margin-top: 50px;
+}
+
+header li
+{
+    display:inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+header img {
+  display: none;
+}
+
+header li:hover img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 7px;
+}
+
+/* ************************ HEADINGS ************************** */
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  color: #b15e23;
+}
+
+footer h2 {
+  color: inherit;
+}
+
+header h2 {
+  color: #d5a17c;
+  margin: 0;
+  font-style: italic;
+}
+
+h3 {
+  color: #3c1f0a;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+p {    
+    color: grey;
+    margin: 5px 0px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+/* ************************ SECTIONS ************************** */
+
+#basicInfoDiv {
+  padding-top: 15px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(white, #ecebeb);
+}
+
+.lectureDiv {
+  margin-left: 4em;
+}
+
+#excersise h3 {
+  margin-bottom: 20px;
+}
+
+#excersise img, #lectures img{
+  max-width: 3em;
+  float: left;
+}
+
+#excersise hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#excersise p {
+  margin-left: 4em;
+}
+
+#excersiseDiv {
+  background-image: linear-gradient(to right, rgb(240, 240, 240) , white);
+}
+
+#middleRowDiv {
+  height: 570px;
+  /* margin-bottom: 40px; */
+}
+
+/* ************************ IMG ************************** */
+
+img {
+    display: inline-block;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+/* ************************ HR ************************** */
+
+hr {    
+    color: #d5a17c;
+    border-top: dotted 1px;
+    margin: 0;
+}
+
+/* ************************ TABLE ************************** */
+
+table {
+    border: 3px solid black;
+    width: 575px;
+    /* padding-right: 25px; */
+}
+
+th {
+    color: gray;  
+    border: 3px solid #3c1f0a;
+    border-top: 3px dotted #3c1f0a;
+    border-left: 3px dotted #3c1f0a;
+    background-color: #d5a17c;  
+}
+
+td {
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid grey;
+    text-align: center;
+}
+
+/* ************************ DEFINITION LIST ************************** */
+
+dl {
+    width: 330px;
+}
+
+dd {
+  text-align: right;
+  color: #d5a17c;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+dt {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+dt:after {
+  content: ":";
+}
+
+/* ************************ HREF ************************** */
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: black;
+  text-decoration: none;  
+  }
+
+/* ************************ FOOTER ************************** */
+
+footer {
+      background-color: #3c1f0a;
+      padding: 15px;
+}
+
+footer ul {
+  padding-left: 25px;
+}
+
+footer li {
+  color:#d5a17c;
+  margin-bottom: 8px;
+  list-style-image: url('footer_list_bullet.gif');
+}
