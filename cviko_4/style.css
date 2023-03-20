@@ -154,7 +154,11 @@ p {
 }
 
 #excersiseDiv {
+  padding-right: calc(((100vw - 960px) / 2));
+  margin-right:  calc(((-100vw + 960px) / 2) + 10px);
   background-image: linear-gradient(to right, rgb(240, 240, 240) , white);
+  /* background-image: linear-gradient(to right, rgb(177, 21, 21) , white); */
+
 }
 
 #middleRowDiv {
@@ -252,3 +256,7 @@ footer li {
   margin-bottom: 8px;
   list-style-image: url('footer_list_bullet.gif');
 }
+
+/* footer h2{
+  font-size: 5px;
+} */
