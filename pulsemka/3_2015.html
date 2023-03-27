@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {margin:0; border:1px solid black}
+        #page {color:red; width: 400px}
+        #page .prvni {color: green; width: 300px; margin: auto;}
+        .prvni {color: blue;}
+        .suda {color: blue; font-style: normal;}
+        p i {float: left; width: 400px;}
+
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1>Zajímavý článek</h1>
+        <p class="prvni">Úvodní odstavec článku.</p>
+        <p>
+            <span class="prvni licha">První</span>
+            <i class="suda">Druhá</i>
+            <i class="licha">Poslední</i>
+        </p>
+    </div>
+
+</body>
+</html>
+
+<!--
+    Odpovede:
+    1. c) - 6 elementov - div, h1, p, p, i, i (i kvoli float)
+    2. b) a d) - vytrhnute z flow stranky, su obtekane ostatnym obsahom
+    3. zaujimavy - red
+    4. uvodni - green
+    5. prvni - green
+    6. druha - blue
+        - na zaklade specifickosti - cim presnejsi popis tym skor sa to vykona
+    7. posledni - red
+    8. iba prvni
+    9. b) - 49px (400px (sirka #page) - 300px (sirka odstavca prvy) - 2px (border)) / 2 (margin: auto)
+        - span ostane na celu sirku, kedze je to inline v zaklade
+    10. 0px - su pod sebou
+-->

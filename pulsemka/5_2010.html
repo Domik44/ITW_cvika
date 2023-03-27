@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content {color: green; width: 500px}
+        #content .prvni {} /*nerobi nic lulw*/
+        p .prvni {color: red; padding: 0;}
+        .prvni {color: blue;}
+        p {color: red; width: 200px; margin: auto;}
+        h1:first-child {font-style:italic;}
+
+    </style>
+</head>
+<body>
+    <div id="content" class="prvni">
+        <h1>hovna</h1>
+        <p class="prvni">Text odstavce </p>
+        <p>
+            <span class="prvni">První</span>
+            <span>Druhý</span>
+            <span class="content">Poslední</span>
+        </p>
+    </div>
+</body>
+</html>
+
+<!--
+    Odpovede:
+    1. 4 blokove elementy
+    2. kodovanie sa da definovat v meta tagu v hlavicke dokumentu (<head></head>)
+    3. nadpis - green
+    4. prvy odstavec - blue
+    5. prvni span - red
+    6. druhy span - red
+    7. posledni span - red
+    8. ak by bolo color: inherit !important; na p tagu, tak by bol posledni span zeleny
+        - ak by bolo color: inherit !important; na span tagu, tak by bol posledni span red - lebo p je parent toho spanu
+    9. sirka prveho odstavca je 200px, zvysok do 500px tvori margin: auto
+    10. maegin pravy aj lavy bude 150px
+-->

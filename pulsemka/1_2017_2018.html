@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #page {
+            color: red;
+            font-weight: normal;
+            width: 900px;
+        }
+        #page .posledni {
+            color: green;
+        }
+        p span {
+            margin: 10px;
+            border: 1px solid black;
+        }
+        #page span {
+            /* box-sizing: border-box;
+            display: inline-block;
+            width: calc(300px - 23px); */
+            float: left;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+        #main {
+            font-style: italic;
+        }
+        #page p.posledni {
+            color: black;
+        }
+        #page span:first-child {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1 id="main">Zajímavý článek</h1>
+        <p>
+            <span>První</span>
+            <span>Druhá</span>
+            <span class="posledni">Poslední</span>
+        </p>
+        <p class="posledni">Závěrečný odstavec článku.</p>
+    </div>
+</body>
+</html>
