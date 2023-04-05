@@ -1,0 +1,305 @@
+/* 
+Author:   Dominik Pop
+Login:    xpopdo00 
+*/
+
+
+/* ************************ BASICS ************************** */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body {
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.container
+{
+    width: 1200px;
+    box-sizing: border-box;
+    margin: auto;
+    /* padding: 0 1rem; */
+}
+
+section {
+  padding: 0 1rem 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.afterRow {
+  margin-bottom: 20px;
+}
+
+[class*="col-"] {
+  box-sizing: border-box;
+  /* padding: 1rem; */
+}
+
+.col-1 {flex: 8.33%;}
+.col-2 {flex: 16.66%;}
+.col-3 {flex: 25%;}
+.col-4 {flex: 33.33%;}
+.col-5 {flex: 41.66%;}
+.col-6 {flex: 50%;}
+.col-7 {flex: 58.33%;}
+.col-8 {flex: 66.66%;}
+.col-9 {flex: 75%;}
+.col-10 {flex: 83.33%;}
+.col-11 {flex: 91.66%;}
+.col-12 {flex: 100%;}
+
+div[class*="col-"] div[class*="col-"] {
+  padding: 1rem 1rem 0 0;
+} 
+
+.leftCol {
+  margin-right: 25px;
+}
+
+.rightCol {
+  margin-left: 25px;
+}
+
+/* ************************ HEADER ************************** */
+
+header {
+  padding: 30px 0 1.5rem 0;
+  background-color: #3c1f0a;
+  height: 145px;
+}
+
+#menuDiv {
+  background-color: #b15e23;
+}
+
+#menuDiv nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menuDiv a {
+  padding: 1rem;
+}
+
+#menuDiv a:hover {
+  background-color: #3c1f0a;
+}
+
+/* ************************ HEADINGS ************************** */
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+h2 {
+  color: #b15e23;
+}
+
+footer h2 {
+  color: inherit;
+}
+
+header h2 {
+  color: #d5a17c;
+  margin: 0;
+  font-style: italic;
+}
+
+h3 {
+  color: #3c1f0a;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+p {    
+    color: grey;
+    margin: 5px 0px;
+    text-align: justify;
+    text-justify: auto;
+}
+
+/* ************************ SECTIONS ************************** */
+
+#basicInfoDiv {
+  padding: 15px 0 50px 0;
+  background-image: linear-gradient(white, #d3d3d3);
+}
+
+#basicInfoDiv p {
+  margin-top: 1.5rem;
+}
+
+.lectureDiv {
+  margin-left: 4em;
+}
+
+#results {
+  margin-top: 4rem;
+}
+
+#excersise h3 {
+  margin-bottom: 20px;
+}
+
+#excersise img, #lectures img{
+  max-width: 3em;
+  float: left;
+}
+
+#excersise hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#excersise p {
+  margin-left: 4em;
+}
+
+#excersiseDiv {
+  /* padding-right: calc(((100vw - 1200px) / 2));
+  margin-right:  calc(((-100vw + 1200px) / 2) + 10px); */
+  background-image: linear-gradient(to right, rgb(240, 240, 240) , white);
+
+}
+
+/* ************************ IMG ************************** */
+
+img {
+    display: inline-block;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+/* ************************ HR ************************** */
+
+hr {    
+    color: #d5a17c;
+    border-top: dotted 1px;
+    margin: 0;
+}
+
+/* ************************ TABLE ************************** */
+
+table {
+    width: 100%;
+}
+
+th {
+    color: gray;  
+    background-color: #d5a17c;  
+}
+
+td {
+    color: black;
+    text-align: center;
+}
+
+/* ************************ DEFINITION LIST ************************** */
+
+dl {
+    width: 330px;
+}
+
+dd {
+  text-align: right;
+  color: #d5a17c;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+dt {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+dt:after {
+  content: ":";
+}
+
+/* ************************ HREF ************************** */
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: black;
+  text-decoration: none;  
+  }
+
+/* ************************ FOOTER ************************** */
+
+footer {
+  background-color: #3c1f0a;
+}
+
+footer ul {
+  padding-left: 25px;
+}
+
+footer li {
+  color:#d5a17c;
+  margin-bottom: 8px;
+  list-style-image: url('footer_list_bullet.gif');
+}
+
+footer dt {
+  margin: 0;
+}
+
+/* XS */
+@media only screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+
+  .row > div[class*="col-"] {
+    flex: 100%;
+  }
+}
+
+/* SM */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+
+  .row > div[class*="col-"] {
+    flex: 100%;
+  }
+}
+
+/* MD */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+
+  #excersiseDiv, #subjectsDiv {
+    flex: 41.66%;
+  }
+
+  #lecturesDiv, #contactsDiv {
+    flex: 58.33%;
+  }
+
+  .row > div[class*="col-"] div[class*="col-"] {
+    flex: 100%;
+  }
+}
+
+/* LG */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 100%;
+  }
+}
