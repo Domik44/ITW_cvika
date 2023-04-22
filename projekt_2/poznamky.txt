@@ -1,0 +1,3 @@
+header bude pres celou obrazovku -> pouze na wide zobrazeni jinak ho hidnu
+scroll mě dostane na další sekci nebo další moznost tlacitko
+Pak už ten scroll nebude přeskakovat -> jedine v headeru
