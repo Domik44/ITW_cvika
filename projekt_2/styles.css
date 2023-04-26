@@ -1,3 +1,675 @@
+/**
+* Author: xpopdo00
+* Email:  xpopdo00@stud.fit.vutbr.cz
+* Description: ITW - project 2 -> personal presentation website
+*/
+
+/* IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
+
+/* ---------- DOCUMENT ---------- */
+
+/* Variable didnt work after adding DOCTYPE to index, dunno why :( */
+/* :root {
+    --nav-bar-height: 68px;
+} */
+
+html {
+    /* Adding padding to top because of fixed menu */
+    scroll-padding-top: 68px;
+    /* scroll-padding-top: var(--nav-bar-height); */
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    /* Adding padding to top because of fixed menu */
+    padding-top: 68px;
+    /* padding-top: var(--nav-bar-height); */
+    font-family: Ubuntu, sans-serif;
+}
+
+hr {
+    margin: 24px 0;
+    border: 1px solid#a08066;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+.initial {
+    text-indent: 60px;
+}
+
+/* Sections */
+
 .container {
-    width: 1200px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+section.container {
+    /* Each section should be at least height of screen */
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Headings */
+
+h1, h2, h3, h4 {
+    font-family: 'Saira Extra Condensed';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+section.container h2 {
+    font-size: 3rem;
+    color: #a08066;
+}
+
+section.container h3 {
+    font-size: 1.75rem;
+    color: #a08066;
+}
+
+section.container h4 {
+    font-size: 1.4rem;
+    color: #5e4a4b;
+}
+
+section.container:hover h2{
+    color: #dcb37b;
+}
+
+#education div.education:hover h3 {
+    color: #dcb37b;
+}
+
+/* Styling classes */
+
+.hidden {
+    display: none;
+}
+
+.underline {
+    text-decoration: underline #5e4a4b;
+    text-underline-offset: 7px;
+}
+
+.dark-brown {
+    color: #5e4a4b;
+}
+
+.light-brown {
+    color: #dcb37b;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.nav-bar > nav {
+    /* Positioning */
+    /* Fixing navbar to stay while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%; 
+    height: 69px;
+    /* Displaying items in row */
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    /* Styling */
+    background-color: #a08066;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    padding: 25.5px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-item:first-child {
+    display: none;
+}
+
+.nav-bar a.active {
+    background-color: #5e4a4b;
+}
+
+.nav-bar a:hover {
+    background-color: #5e4a4b;
+    transition: 0.3s;
+}
+
+/* ---------- INTRO ---------- */
+
+.dot {
+    margin: 0 10px;
+}
+
+.profile-picture {
+    border: 4px solid 	#dcb37b;
+    border-radius: 50%;
+    width: 200px;
+    transition: 0.5s;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+.intro-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.intro-item {
+    margin: 1.5rem auto;
+}
+
+.intro-item i:hover {
+    cursor: pointer;
+    color: #dcb37b;
+    transition: 0.5s;
+}
+
+#intro h1 {
+    font-size: 3rem;
+}
+
+#intro p {
+    font-size: 1.5rem;
+}
+
+.intro-item .intro-info {
+    transition: 0.3s;
+}
+
+.intro-item .intro-info:hover {
+    color: #dcb37b;
+}
+
+.intro-div-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+#hello_rest {
+    margin-top: 5px;
+}
+
+#intro p .intro-word {
+    font-size: 150%;
+}
+
+.intro-sentence {
+    margin-top: 35px;
+    margin-left: 10px;
+    vertical-align: bottom;
+}
+
+#intro ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#intro ul > li {
+    display: inline-block;
+    padding: 10px 20px;
+    border-right: 2px solid #a08066;
+}
+
+#intro li:last-child {
+    border: none;
+}
+
+#intro li i {
+    font-size: 30px;
+}
+
+/* ---------- EDUCATION SECTION ---------- */
+
+.education {
+    margin-bottom: 60px;
+}
+
+#education .education a {
+    max-width: 400px;
+    display: block;
+    margin-right: 0;
+}
+
+.education-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.education-flex-item {
+    margin: 0;
+}
+
+.education-flex-item:first-child {
+    width: 300px;
+    margin-right: 100px;
+    text-decoration: underline #a08066;
+    text-underline-offset: 7px;
+}
+
+.education-flex-item:last-child{
+    color: #a08066;
+}
+
+#education.container .education h3 {
+    margin-bottom: 0px;
+}
+
+#education.container .education h4 {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* ---------- PROJECTS SECTION ---------- */
+
+/* Animation */
+@keyframes fade-right {
+    /* Fading in from right to left */
+    from {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.fade-right {
+    animation: fade-right 1.5s;
+}
+
+.technologies-div i {
+    border-right: 2px solid #a08066;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    font-size: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.technologies-div i:last-child {
+    border: none;
+}
+
+.technologies-div i:hover {
+    color: #dcb37b;
+}
+
+#projects section:hover h4 {
+    color: #dcb37b;
+}
+
+section section:hover h3 {
+    color: #dcb37b;
+}
+
+/* Styling pagination buttons */
+#pagination_div {
+    /* Putting elements in row */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination-button {
+    border: none;
+    color: #dcb37b;
+    background-color: inherit;
+    font-size: 25px;
+}
+
+.pagination-button:disabled:hover {
+    cursor: initial;
+    color: #dcb37b;
+}
+
+.pagination-button:hover {
+    cursor: pointer;
+    color: #a08066;
+    transition: 0.3s;
+}
+
+.pagination-input {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #5e4a4b;
+}
+
+/* ---------- HOBBIES SECTION ---------- */
+
+#hobbies img {
+    width: 200px;
+    margin: 0 10px 20px 20px;
+    float: right;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+#hobbies section:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* ---------- SEND MESSAGE DIV + ANIMATION ---------- */
+
+footer {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+footer::before {
+    content: '';
+    background-image: url("img/message.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* Positioning */
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    z-index: -1;
+    /* Dimensions */
+    width: 70%;
+    height: 70%;
+    /* Styling */
+    opacity: 0.3;
+}
+
+/* Animation */
+@keyframes message {
+    /* Slide in from bottom */
+    from {top: 120px; opacity: 0;}
+    to {top: 90px; opacity: 1;}
+}
+
+/* Icon sizes */
+.fa-regular.fa-envelope {
+    font-size: 70px;
+    margin-top: 15px;
+}
+
+/* Showing message sent */
+#message.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Creating message send element */
+#message {
+    /* Positioning */
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: calc((100% - 330px) / 2);
+    z-index: 100;
+    margin: auto;
+    /* Dimensions */
+    height: 120px;
+    width: 300px;
+    padding: 15px;
+    /* Styling */
+    border: 3px solid #5e4a4b;
+    border-radius: 20px;
+    background-color: #a08066;
+    color: white;
+    /* Animation */
+    animation-name: message;
+    animation-direction: normal;
+    animation-duration: 0.5s;
+}
+
+/* Message form styles */
+#message_div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#message_div h2 {
+    color: #a08066;
+}
+
+#message_div:hover h2 {
+    color: #dcb37b;
+}
+
+#message_div label {
+    margin-bottom: 7px;
+    font-size: 20px;
+    color: #5e4a4b;
+}
+
+#email {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 2px solid #a08066;
+    border-radius: 5px;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+}
+
+#email:focus {
+    outline: 2px solid #dcb37b;
+}
+
+#text {
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 2px solid #a08066;
+    border-radius: 5px;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+}
+
+#text:focus {
+    outline: 2px solid #dcb37b;
+}
+
+/* Send mail button styling*/
+#send_mail {
+    /* Positioning */
+    width: 100px;
+    border: 2px solid #a08066;
+    margin-left: auto;
+    padding: 10px;
+    /* Styling */
+    background-color: #a08066;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Very small devices */
+@media only screen and (max-width: 350px) {
+    /* Resize images on very small devices */
+    #hobbies img {
+        width: 140px;
+    }
+}
+
+/* XS, SM */
+@media only screen and (max-width: 768px) {
+    /* Change container behavior -> take full width of device */
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Break words on smaller devices -> otherwise jusfify-content has 
+    big spaces */
+    p {
+        word-break: break-all;
+    }
+
+    /* Nav-bar changes */
+    /* Add menu bars, hide other items and show them on click only */
+    .nav-bar nav {
+        flex-direction: column;
+        justify-content: right;
+    }
+
+    /* Menu items will take full width of device */
+    .nav-bar nav div {
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        float: right;
+        text-align: right;
+        background-color: #dcb37b;
+    }
+
+    /* Menu bars */
+    .nav-item:first-child {
+        display: block;
+        background-color: #a08066;
+    }
+
+    /* Hiding other items */
+    .nav-item:not(:first-child){
+        display: none;
+    }
+
+    /* Show other items after menu bars are clicked */
+    .nav-bar.open .nav-item {
+        display: block;
+    }
+
+    /* Intro section changes */
+    /* Hide dots */
+    .dot {
+        display: none;
+    }
+
+    /* Change direction of typewrited sentence to columns */
+    .intro-flex {
+        margin-top: 0;
+    }
+
+    .intro-div-flex {
+        flex-direction: column;
+    }
+
+    /* Stop written words from breaking */
+    .intro-div-flex.intro-item p{
+        margin: 10px 0;
+        text-align: center;
+        word-break: keep-all;
+    }
+
+    /* Education section changes */
+    /* Display date under */
+    .education-flex {
+        flex-direction: column;
+    }
+
+    /* Add gap before date */
+    .education-flex-item:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Message form will take full width of device */
+    #message_div {
+        margin: auto;
+        width: 100%;
+    }
+
+    /* Changing background image size and positioning */
+    footer::before {
+        content: '';
+        background-image: url("img/message.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        /* Positioning */
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: -1;
+        /* Dimensions */
+        width: 80%;
+        height: 80%;
+        /* Styling */
+        opacity: 0.15;
+    }
+}
+
+/* MD, Tablet like devices */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    /* Changing container size */ 
+    .container {
+        max-width: 760px;
+        margin: auto;
+    }
+
+    .intro-flex {
+        margin-top: 0;
+    }
+
+    .intro-div-flex {
+        flex-direction: column;
+    }
+
+    .intro-div-flex.intro-item p{
+        text-align: center;
+        margin: 10px 0;
+        word-break: keep-all;
+    }
+
+    .dot {
+        display: none;
+    }
+}
+
+/* LG, Laptotps */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Changing container size */ 
+    .container {
+        max-width: 975px;
+        margin: auto;
+    }
 }

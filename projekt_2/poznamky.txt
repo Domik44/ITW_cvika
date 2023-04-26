@@ -1,3 +1,13 @@
 header bude pres celou obrazovku -> pouze na wide zobrazeni jinak ho hidnu
 scroll mě dostane na další sekci nebo další moznost tlacitko
 Pak už ten scroll nebude přeskakovat -> jedine v headeru
+
+v sekci projekty udelat jednoduchou paginaci ktera bude preblikavat mezi projekty
+	-> prvni projekt airsoft oraginzer
+		-> popis
+		-> technologie
+		-> zpracovani
+	-> druhej projekt bakalarka
+		-> popis 
+		-> technologie
+		-> zpracovani

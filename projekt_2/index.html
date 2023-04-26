@@ -1,81 +1,391 @@
-<html>
+<!-- 
+* Author: xpopdo00
+* Email:  xpopdo00@stud.fit.vutbr.cz
+* Description: ITW - project 2 -> personal presentation website 
+* WEBSITE URL: https://www.stud.fit.vutbr.cz/~xpopdo00/
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Scalable viewport for phones -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Importing styles -->
         <link rel="stylesheet" href="styles.css">
+        <!-- Importing jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- Importing jquery ui -> just for class animations, maybe even not needed -->
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <!-- Font styles -->
+        <script src="https://kit.fontawesome.com/24bdb70d27.js" crossorigin="anonymous"></script>
         <title>MyLife</title>
     </head>
     <body>
-        <header>
-            <div id="menu">
-                <ul>
-                    <li>Obecné</li>
-                    <li>Vzdělání</li>
-                    <li>Projekty</li>
-                    <li>Koníčky</li>
-                </ul>
-            </div>
-            <p>Stránka o:</p>
-            <h2>BLKDAKGWNANSDN</h2>
-            <p>TADY BUDE PICTURE</p>
-            <div id="socials">
-                <ul>
-                    <li>
-                        FB
-                    </li>
-                    <li>
-                        TW
-                    </li>
-                    <li>
-                        IG
-                    </li>
-                </ul>
-            </div>
+        <!-- Message sent element -->
+        <div id="message">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Message sent!</span><br>
+        </div>
+
+        <!-- Navigation bar -->
+        <header class="nav-bar">
+            <nav id="menu">
+                <div>
+                    <a class="nav-item bar"><i class="fa-solid fa-bars"></i></a>
+                    <a class="nav-item active" id="intro_a">Home</a>
+                    <a class="nav-item" id="basic_a">About</a>
+                    <a class="nav-item" id="education_a">Education</a>
+                    <a class="nav-item" id="projects_a">Projects</a>
+                    <a class="nav-item" id="hobbies_a">Hobbies</a>
+                </div>
+            </nav>
         </header>
-        <sectior id="basic">
-            <h2>O mně</h2>
-            <p>
-                TADY ASI LOREM IPSUM
+
+        <!-- Sections -->
+        <!-- Intro section -->
+        <section id="intro" class="container">
+            <div class="intro-flex">
+                <div class="intro-div-flex intro-item">
+                    <p id="hello_hi"><span class="intro-word">Hi! </span></p>
+                    <p id="hello_p" class="intro-sentence"><span id="hello_rest"></span></p>
+                </div>
+                <a href="https://www.stud.fit.vutbr.cz/~xpopdo00/"><h1 class="intro-item underline"><span class="dark-brown">DOMINIK </span><span class="light-brown">POP</span></h1></a>
+                <img src="img/pfp.jpg" class="profile-picture intro-item" alt="Profile picture">
+                <div class="intro-div-flex intro-item">
+                    <p>
+                        <a href="mailto:xpopdo00@stud.fit.vutbr.cz"><span class="intro-info">xpopdo00@fit.vutbr.cz</span></a>
+                    </p>
+                    <p>
+                        <span class="dot">•</span><span class="intro-info">Somewhere over the rainbow</span><span class="dot">•</span>
+                    </p>
+                    <p>
+                        <span class="intro-info">(420) 420 240 420</span>
+                    </p>
+                </div>
+                <div id="socials" class="intro-item">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100012479928120" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a><i class="fa-brands fa-discord"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Basic information section -->
+        <section id="basic" class="container">
+            <h2>About me</h2>
+            <p class="initial">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis leo in tortor interdum placerat vitae vel magna. Integer ultricies neque nec dolor rhoncus, sit amet ultrices massa ultrices. Fusce erat lorem, iaculis sit amet turpis hendrerit, molestie malesuada nisi. Donec neque elit, placerat a leo blandit, dignissim iaculis purus. Maecenas facilisis dapibus pulvinar. Donec mattis odio ac congue venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec consectetur enim mauris, sit amet accumsan orci ornare sagittis. Vestibulum pellentesque nibh lectus, eget mollis magna condimentum id. In maximus augue tempor elit ultrices, at pellentesque nunc finibus. Nam sit amet neque consequat nisi posuere tincidunt. Vestibulum ultrices feugiat ex, sodales hendrerit nulla euismod nec. Aenean imperdiet justo lacinia est placerat, sit amet bibendum felis tristique. Pellentesque metus purus, euismod quis faucibus nec, rutrum in magna. Sed aliquet arcu nunc, ut faucibus mi pulvinar lacinia.
+                Pellentesque tincidunt ipsum tellus, vel ornare nulla cursus vel. Phasellus ornare massa eget urna ultrices euismod. Sed rutrum, lorem et ullamcorper fringilla, enim tortor molestie sem, sed dapibus tellus risus at ex. Nulla facilisi. Cras elementum purus vel consequat vestibulum. Cras velit velit, eleifend ut dolor eget, scelerisque sodales lacus. Quisque in magna tellus. Aliquam commodo non tortor at rutrum. Ut et suscipit turpis.
+                Nunc sodales dapibus dolor, vitae commodo lectus cursus at. Vestibulum bibendum lorem eu augue lacinia, nec ullamcorper leo convallis. Quisque consequat congue nunc, vitae ultricies tellus luctus non. Aenean sit amet lorem auctor quam euismod pretium. Nullam gravida, erat et tempus elementum, lorem erat sagittis sapien, nec tempor purus mi sit amet elit. Curabitur aliquam sed lectus sit amet congue. In et quam eget tellus facilisis dictum id sed urna. Donec condimentum nulla ut ornare tempor. In scelerisque ante in leo venenatis facilisis. Donec feugiat maximus ultricies. Sed at commodo nibh. Etiam laoreet at nulla at faucibus. Suspendisse consectetur imperdiet dolor venenatis bibendum.
             </p>
         </section>
-        <section id="education">
-            <h2>Vzdělání</h2>
-            <div id="education_1">
-                Zakladni
+        <hr>
+
+        <!-- Education section -->
+        <section id="education" class="container">
+            <h2>Education</h2>
+            <div id="education_1" class="education">
+                <a href="https://sps-prerov.cz/" target="_blank"><h3>Technical College SPŠ Přerov</h3></a>
+                <h4>Matriculation education</h4>
+                <div class="education-flex">
+                    <p class="education-flex-item">
+                        Technical lyceum
+                    </p>
+                    <p class="education-flex-item">
+                        September 2016 - June 2020
+                    </p>
+                </div>
             </div>
-            <div id="education_2">
-                Stredni
-            </div>
-            <div id="education_3">
-                Vysoke
+
+            <!-- <hr> -->
+            <div id="education_2" class="education">
+                <a href="https://www.vut.cz/" target="_blank"><h3>Brno university of technology</h3></a>
+                <h4>Bachelor of science</h4>
+                <div class="education-flex">
+                    <p class="education-flex-item">
+                        Faculty of information technology
+                    </p>
+                    <p class="education-flex-item">
+                       September 2020 - June 2023
+                    </p>
+                </div>
             </div> 
         </section>
-        <section id="projects">
-            <h2>Vybrané projekty</h2>
-            <div id="project_1">
-                <h4>
-                    Projekt 1
-                </h4>
-            </div>
-            <div id="project_2">
-                <h4>
-                    Projekt 2
-                </h4>
-            </div>
-            <div id="project_3">
-                <h4>
-                    Projekt 3
-                </h4>
-            </div>
-        </section>
-        <section id="hobbies">
-            <h2>Koníčky</h2>
-        </section>
-        <footer>
-            <h3>Pošelte mi zprávu:</h3>
-            <div id="message_div">
+        <hr>
 
+        <!-- Projects section -->
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div id="project_1" class="fade-right">
+                <h3>
+                    Airsoft Organizer
+                </h3>
+                <section>
+                    <h4>Description</h4>
+                    <p class="initial">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tortor nulla, semper vitae augue id, finibus viverra orci. Aenean lacinia, odio et eleifend scelerisque, dui risus facilisis justo, et dapibus sapien urna eget massa. Proin iaculis laoreet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra et purus eget elementum. Suspendisse iaculis molestie massa, a rhoncus risus sodales ac. Quisque lobortis ex in eros eleifend tristique. Nunc et tellus ut leo placerat tempus.
+                        Sed tortor orci, bibendum ut orci in, molestie sollicitudin odio. In scelerisque vitae lorem vel aliquam. Integer viverra vestibulum erat in placerat. Sed pharetra eu orci eget ullamcorper. Cras porta mollis consequat. Sed nec erat ut est semper dapibus quis nec lorem. Nullam sed elit nulla. Donec tristique mi eu eros tincidunt accumsan. Morbi id semper nisl. Suspendisse consequat aliquet efficitur. Nam semper mauris eu varius porta. Duis nulla mauris, varius eu sodales euismod, pulvinar a libero.
+                        Donec vel arcu velit. Mauris non quam diam. Ut quis turpis rhoncus, tincidunt diam ac, consectetur diam. Mauris sed accumsan justo, congue pellentesque erat. Etiam enim magna, vehicula sed varius eu, tempus at massa. Maecenas congue massa diam, sed bibendum mi maximus quis. In vulputate vehicula euismod. Donec suscipit tellus arcu, et venenatis orci pulvinar nec. Vivamus ultricies nibh ut urna condimentum feugiat. Phasellus ac tincidunt nunc. Mauris eu nulla a diam pulvinar consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    </p>
+                </section>
+                <section>
+                    <h4>Used technologies</h4>
+                    <div class="technologies-div">
+                        <i class="fa-brands fa-square-js"></i>
+                        <i class="fa-brands fa-php"></i>
+                        <i class="fa-brands fa-laravel"></i>
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                </section>
+                <section>
+                    <h4>From - To</h4>
+                    <p>
+                        September 2022 - January 2022
+                    </p>
+                </section>
             </div>
+            <div id="project_2" class="hidden fade-right">
+                <h3>
+                    GedHelp
+                </h3>
+                <section>
+                    <h4>Description</h4>
+                    <p class="initial">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tortor nulla, semper vitae augue id, finibus viverra orci. Aenean lacinia, odio et eleifend scelerisque, dui risus facilisis justo, et dapibus sapien urna eget massa. Proin iaculis laoreet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra et purus eget elementum. Suspendisse iaculis molestie massa, a rhoncus risus sodales ac. Quisque lobortis ex in eros eleifend tristique. Nunc et tellus ut leo placerat tempus.
+                        Sed tortor orci, bibendum ut orci in, molestie sollicitudin odio. In scelerisque vitae lorem vel aliquam. Integer viverra vestibulum erat in placerat. Sed pharetra eu orci eget ullamcorper. Cras porta mollis consequat. Sed nec erat ut est semper dapibus quis nec lorem. Nullam sed elit nulla. Donec tristique mi eu eros tincidunt accumsan. Morbi id semper nisl. Suspendisse consequat aliquet efficitur. Nam semper mauris eu varius porta. Duis nulla mauris, varius eu sodales euismod, pulvinar a libero.
+                        Donec vel arcu velit. Mauris non quam diam. Ut quis turpis rhoncus, tincidunt diam ac, consectetur diam. Mauris sed accumsan justo, congue pellentesque erat. Etiam enim magna, vehicula sed varius eu, tempus at massa. Maecenas congue massa diam, sed bibendum mi maximus quis. In vulputate vehicula euismod. Donec suscipit tellus arcu, et venenatis orci pulvinar nec. Vivamus ultricies nibh ut urna condimentum feugiat. Phasellus ac tincidunt nunc. Mauris eu nulla a diam pulvinar consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    </p>
+                </section>
+                <section>
+                    <h4>Used technologies</h4>
+                    <div class="technologies-div">
+                        <i class="fa-brands fa-square-js"></i>
+                        <i class="fa-brands fa-php"></i>
+                        <i class="fa-brands fa-laravel"></i>
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                </section>
+                <section>
+                    <h4>From - To</h4>
+                    <p>
+                        September 2022 - On going
+                    </p>
+                </section>
+            </div>
+            <div id="pagination_div">
+                <button class="pagination-button left" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                <p class="pagination-input"><span id="pagination_value">1</span> / 2</p>
+                <button class="pagination-button right"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Hobbies section -->
+        <section id="hobbies" class="container">
+            <h2>Hobbies</h2>
+            <section>
+                <h3>Motorbike</h3>
+                <img src="img/motorbike.jpg" alt="">
+                <p class="initial">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tortor nulla, semper vitae augue id, finibus viverra orci. Aenean lacinia, odio et eleifend scelerisque, dui risus facilisis justo, et dapibus sapien urna eget massa. Proin iaculis laoreet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra et purus eget elementum. Suspendisse iaculis molestie massa, a rhoncus risus sodales ac. Quisque lobortis ex in eros eleifend tristique. Nunc et tellus ut leo placerat tempus.
+                    Sed tortor orci, bibendum ut orci in, molestie sollicitudin odio. In scelerisque vitae lorem vel aliquam. Integer viverra vestibulum erat in placerat. Sed pharetra eu orci eget ullamcorper. Cras porta mollis consequat. Sed nec erat ut est semper dapibus quis nec lorem. Nullam sed elit nulla. Donec tristique mi eu eros tincidunt accumsan. Morbi id semper nisl. Suspendisse consequat aliquet efficitur. Nam semper mauris eu varius porta. Duis nulla mauris, varius eu sodales euismod, pulvinar a libero.
+                </p>
+            </section>
+            <section>
+                <h3>Airsoft</h3>
+                <img src="img/airsoft.jpg" alt="">
+                <p class="initial">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tortor nulla, semper vitae augue id, finibus viverra orci. Aenean lacinia, odio et eleifend scelerisque, dui risus facilisis justo, et dapibus sapien urna eget massa. Proin iaculis laoreet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra et purus eget elementum. Suspendisse iaculis molestie massa, a rhoncus risus sodales ac. Quisque lobortis ex in eros eleifend tristique. Nunc et tellus ut leo placerat tempus.
+                    Sed tortor orci, bibendum ut orci in, molestie sollicitudin odio. In scelerisque vitae lorem vel aliquam. Integer viverra vestibulum erat in placerat. Sed pharetra eu orci eget ullamcorper. Cras porta mollis consequat. Sed nec erat ut est semper dapibus quis nec lorem. Nullam sed elit nulla. Donec tristique mi eu eros tincidunt accumsan. Morbi id semper nisl. Suspendisse consequat aliquet efficitur. Nam semper mauris eu varius porta. Duis nulla mauris, varius eu sodales euismod, pulvinar a libero.
+                </p>
+            </section>
+        </section>
+        <hr>
+
+        <!-- Footer -->
+        <footer class="container">
+            <form id="mail_form">
+                <div id="message_div">
+                    <h2>Message me!</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter email" required>
+                    <label for="text">Message:</label>
+                    <textarea id="text" rows="5" placeholder="Enter message" required></textarea>
+                    <button id="send_mail" type="submit">Send</button>
+                </div>
+            </form>
         </footer>
+
+        <!-- Scripts -->
+        <script>
+            /* Wait after page load */
+            $(document).ready(function(){
+                var nav_height = set_nav_height();
+                type_text();
+
+                /** 
+                * @brief Function for setting nav-bar-height property.
+                */
+                function set_nav_height(){
+                    var height = $('#menu').height();
+                    /* Set CSS variable */
+                    document.documentElement.style.setProperty('--nav-bar-height', height);
+
+                    return height;
+                }
+
+                /**
+                 * @brief Function for typing text letter by letter into span field.
+                */
+                function type_text(){
+                    /* Text to be written */
+                    var text = " On this page you will learn something about me!";
+                    for(var i = 0; i < text.length; i++){
+                        /* Function that will wait 70ms between letters */
+                        setTimeout(function(text, i){
+                            /* Replacing spans html with concatenated string */
+                            $('#hello_rest').html($('#hello_rest').html() + text[i]);
+                        }, 70*i, text, i);
+                    }
+                }
+
+                /**
+                 * @brief Handler for clicking nav-bar items
+                */
+                $('.nav-item').click(function(){
+                    /* Checking if navbar menu is opened */
+                    var menuOpened = false;
+                    if($('.nav-bar').hasClass('open')){
+                        menuOpened = true;
+                    }
+
+                    /* If bar icons was clicked */
+                    if($(this).hasClass('bar')){
+                        /* Showing menu */
+                        $('.nav-bar').toggleClass('open');
+                        /* Setting CSS variable */
+                        if(!menuOpened){
+                            $('body').css('padding-top', 6*nav_height);                        }
+                        else{
+                            $('body').css('padding-top', nav_height);
+                        }
+                    }
+                    else{
+                        var selector = '#'+this.id.split('_')[0];
+                        /* Closing menu after item was clicked */
+                        if(menuOpened){
+                            $('.nav-bar').toggleClass('open');
+                            $('body').css('padding-top', nav_height);
+                            // document.documentElement.style.setProperty('--nav-bar-height', nav_height);
+                        }
+                        /* Scrolling to wanted section */ 
+                        $(window).scrollTop($(selector).offset().top - nav_height);
+                    }
+                });
+
+                /* 
+                    @brief Page scroll handler, used for navbar items activation.
+                */
+                $(window).scroll(function(){
+                    /* Get offset of section and current offset */
+                    var offset = $(window).scrollTop() + nav_height + 1;
+                    var introOffset = $('#intro').offset().top;
+                    var basicOffset = $('#basic').offset().top;
+                    var educationOffset = $('#education').offset().top;
+                    var projectsOffset = $('#projects').offset().top;
+                    var hobbiesOffset = $('#hobbies').offset().top;
+
+                    /* Activate right nav-bar item */
+                    if(offset < basicOffset){
+                        $('.nav-item').removeClass('active');
+                        $('#intro_a').addClass('active');
+                    }
+
+                    if(offset >= basicOffset && offset < educationOffset){
+                        $('.nav-item').removeClass('active');
+                        $('#basic_a').addClass('active');
+                    }
+
+                    if(offset > educationOffset && offset < projectsOffset){
+                        $('.nav-item').removeClass('active');
+                        $('#education_a').addClass('active');
+                    }
+
+                    if(offset > projectsOffset && offset < hobbiesOffset){
+                        $('.nav-item').removeClass('active');
+                        $('#projects_a').addClass('active');
+                    }
+
+                    if(offset >= hobbiesOffset){
+                        $('.nav-item').removeClass('active');
+                        $('#hobbies_a').addClass('active');
+                    }
+                });
+
+                /**
+                 *  @brief Handler for clicking pagination arrows
+                */
+                $('.pagination-button').click(function(){
+                    /* Ignore clicking on disabled arrows */
+                    if(!$(this).prop('disabled')){
+                        /* Checking which arrow was clicked */
+                        if($(this).hasClass('right')){
+                            /* Switching pages */
+                            $('#project_2').removeClass('hidden');
+                            $('#project_1').addClass('hidden');
+                            /* Enabling other arrow */
+                            $('.pagination-button.left').attr('disabled', false);
+                            /* Changing page number */
+                            $('#pagination_value').html('2');
+                        }
+                        else{
+                            $('#project_1').removeClass('hidden');
+                            $('#project_2').addClass('hidden');
+                            $('.pagination-button.right').attr('disabled', false);
+                            $('#pagination_value').html('1');
+                        }
+
+                        /* Disabling clicked arrow */
+                        $(this).attr('disabled', true);
+                        /* Sliding back up in projects section */
+                        $('#projects_a').trigger('click');
+                    }
+                });
+
+                /**
+                 *  @brief Handler for submiting "send email" form
+                */
+                $('#mail_form').submit(function(event){
+                    /* Preventing synchronous form submit call */
+                    event.preventDefault();
+                    /* Showing message */ 
+                    $('#message').addClass('show');
+                    $('#email').val('');
+                    $('#text').val('');
+                    /* 
+                    Here I could place ajax call for submiting form :)
+                    */
+
+                    /* Hide message after 2 seconds */ 
+                    setTimeout(function(){
+                        $('#message').removeClass('show');
+                    }, 2000);
+                });
+            });
+        </script>
     </body>
 </html>
