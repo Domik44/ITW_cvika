@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Scalable viewport for phones -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <!-- Importing styles -->
         <link rel="stylesheet" href="styles.css">
         <!-- Importing jquery -->
@@ -35,6 +35,7 @@
                     <a class="nav-item bar"><i class="fa-solid fa-bars"></i></a>
                     <a class="nav-item active" id="intro_a">Home</a>
                     <a class="nav-item" id="basic_a">About</a>
+                    <!-- <a class="nav-item" id="technologies_a">Technologies</a> -->
                     <a class="nav-item" id="education_a">Education</a>
                     <a class="nav-item" id="projects_a">Projects</a>
                     <a class="nav-item" id="hobbies_a">Hobbies</a>
@@ -57,7 +58,7 @@
                         <a href="mailto:xpopdo00@stud.fit.vutbr.cz"><span class="intro-info">popdominik@seznam.cz</span></a>
                     </p>
                     <p>
-                        <span class="dot">•</span><span class="intro-info">Brno Královo-pole</span><span class="dot">•</span>
+                        <span class="dot">•</span><span class="intro-info">Brno-Královo pole</span><span class="dot">•</span>
                     </p>
                     <p>
                         <span class="intro-info">(+420) 734 209 994</span>
@@ -104,11 +105,22 @@
         </section>
         <hr>
 
+        <!-- Technologies section -->
+        <!-- <section id="technologies" class="container">
+            <h2>Technologies</h2>
+            TODO - will be done soon
+        </section>
+        <hr> -->
+
         <!-- Education section -->
         <section id="education" class="container">
             <h2>Education</h2>
             <div id="education_1" class="education">
-                <a href="https://sps-prerov.cz/" target="_blank"><h3>Technical College SPŠ Přerov</h3></a>
+                <a href="https://sps-prerov.cz/2020/04/29/obor-l/" target="_blank">
+                    <h3>
+                        Technical College SPŠ Přerov
+                    </h3>
+                </a>
                 <h4>Matriculation education</h4>
                 <div class="education-flex">
                     <p class="education-flex-item">
@@ -122,7 +134,11 @@
 
             <!-- <hr> -->
             <div id="education_2" class="education">
-                <a href="https://www.fit.vut.cz/study/program/8450/.en" target="_blank"><h3>Brno university of technology</h3></a>
+                <a href="https://www.fit.vut.cz/study/program/8450/.en" target="_blank">
+                    <h3>
+                        Brno university of technology
+                    </h3>
+                </a>
                 <h4>Bachelors degree</h4>
                 <div class="education-flex">
                     <p class="education-flex-item">
@@ -134,7 +150,11 @@
                 </div>
             </div>
             <div id="education_3" class="education">
-                <a href="https://www.fit.vut.cz/study/field/15995/.en" target="_blank"><h3>Brno university of technology</h3></a>
+                <a href="https://www.fit.vut.cz/study/field/15995/.en" target="_blank">
+                    <h3>
+                        Brno university of technology
+                    </h3>
+                </a>
                 <h4>Masters degree</h4>
                 <div class="education-flex">
                     <p class="education-flex-item">
@@ -152,8 +172,10 @@
         <section id="projects" class="container">
             <h2>Projects</h2>
             <div id="project_1" class="fade-right">
-                <h3>
-                    Airsoft Organizer
+                <h3 class="link_hover">
+                    <a href="">
+                        Airsoft Organizer
+                    </a>
                 </h3>
                 <section>
                     <h4>Description</h4>
@@ -184,8 +206,10 @@
                 </section>
             </div>
             <div id="project_2" class="hidden fade-right">
-                <h3>
-                    GedHelp
+                <h3 class="link_hover">
+                    <a href="https://github.com/Domik44/BP">
+                        GedHelp
+                    </a>
                 </h3>
                 <section>
                     <h4>Description</h4>
@@ -242,7 +266,7 @@
                     If you would fancy a ride don't hesitate to message me and we can setup a meet!
                 </p>
             </section>
-            <section>
+            <section id="airsoft">
                 <h3>Airsoft</h3>
                 <img src="img/airsoft.jpg" alt="">
                 <p class="initial">
@@ -273,6 +297,7 @@
 
         <!-- Scripts -->
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+
         <script src="lib.js"></script>
         <script>
             // import {sendMail} from "./lib.js";
@@ -349,6 +374,7 @@
                     var offset = $(window).scrollTop() + nav_height + 1;
                     var introOffset = $('#intro').offset().top;
                     var basicOffset = $('#basic').offset().top;
+                    // var technologiesOffset = $('#technologies').offset().top;
                     var educationOffset = $('#education').offset().top;
                     var projectsOffset = $('#projects').offset().top;
                     var hobbiesOffset = $('#hobbies').offset().top;
@@ -359,10 +385,16 @@
                         $('#intro_a').addClass('active');
                     }
 
+                    // if(offset >= basicOffset && offset < technologiesOffset){
                     if(offset >= basicOffset && offset < educationOffset){
                         $('.nav-item').removeClass('active');
                         $('#basic_a').addClass('active');
                     }
+
+                    // if(offset >= technologiesOffset && offset < educationOffset){
+                    //     $('.nav-item').removeClass('active');
+                    //     $('#technologies_a').addClass('active');
+                    // }
 
                     if(offset > educationOffset && offset < projectsOffset){
                         $('.nav-item').removeClass('active');

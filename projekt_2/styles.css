@@ -97,7 +97,16 @@ section.container:hover h2{
 
 #education div.education:hover h3 {
     color: #dcb37b;
+    text-decoration: underline;
+    transition: 0.3s;
 }
+
+h3.link_hover a:hover{
+    color: #dcb37b;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
 
 /* Styling classes */
 
@@ -520,10 +529,10 @@ footer::before {
 /* ---------- MEDIA QUERIES ---------- */
 
 /* Very small devices */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 380px) {
     /* Resize images on very small devices */
     #hobbies img {
-        width: 140px;
+        width: 100px;
     }
 }
 
@@ -539,7 +548,7 @@ footer::before {
     /* Break words on smaller devices -> otherwise jusfify-content has 
     big spaces */
     p {
-        word-break: break-all;
+        word-break: break-word;
     }
 
     /* Nav-bar changes */
@@ -671,5 +680,13 @@ footer::before {
     .container {
         max-width: 975px;
         margin: auto;
+    }
+}
+
+/* LG, Laptotps */
+@media only screen and (min-width: 1200px) {
+    /* Changing container size */ 
+    #hobbies section {
+        min-height: 300px;
     }
 }
